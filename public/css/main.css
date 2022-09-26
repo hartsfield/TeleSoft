@@ -23,7 +23,16 @@ body {
 
 .centerMain {
         text-align: center;
-        margin-top: 25vh;
+        margin-top: 21vh;
+}
+
+.main {
+  width: 100%;
+    background-color: #fffff2;
+    height: 10em;
+    position: fixed;
+    z-index: 10;
+    top: 0;
 }
 
 .telesoftLogoSub {
@@ -95,6 +104,7 @@ body {
         position: fixed;
         top: 1em;
         left: 1.5em;
+        z-index: 11;
 }
 
 .bottomNav {
@@ -181,7 +191,7 @@ body {
 .cbblue { background-color: #346a95; }
 
 .projects {
-    margin-top: 11em;
+    margin-top: 3em;
     margin-left: 1em;
     max-width: 75ch;
     display: inline-flex;
@@ -225,3 +235,15 @@ body {
         margin-left: 1em;
 }
 
+.about {
+    padding-left: 1.9em;
+    font-family: sans-serif;
+    color: #67675d;
+    max-width: 60ch;
+    margin-top: 12.5em;
+}
+
+.foot {
+        font-size: 10em;
+        text-align: center;
+}
