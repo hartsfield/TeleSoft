@@ -191,7 +191,6 @@ body {
 .cbblue { background-color: #346a95; }
 
 .projects {
-    margin-top: 3em;
     margin-left: 1em;
     max-width: 75ch;
     display: inline-flex;
@@ -284,19 +283,40 @@ b {
 }
 
 .contact {
-    width: 55ch;
-    margin-left: 3.3ch;
-    margin-top: 2em;
+    margin-top: 1em;
     font-size: 1.2em;
-    max-width: 90%;
+    padding-left: 1.6em;
+    max-width: 55ch;
+    padding-left: 1.6em;
+    padding-right: 1.6em;
+}
+
+.contactHead {
+        margin-bottom: 1em;
+        font-weight: bold;
 }
 
 .emailInput {
         width: 100%;
+        border-right: 1px solid #d9cb43;
+        border-left: 1px solid #d9cb43;
+        border-top: 1px solid #d9cb43;
+        border-top-left-radius: 0.3em;
+        border-top-right-radius: 0.3em;
+        border-bottom: none;
+        padding: 0.5em;
+        font-family: monospace;
+        font-size: 1em;
 }
 
 .messageArea {
+        padding: 0.5em;
         width: 100%;
+        border: 1px solid #d9cb43;
+        border-bottom-left-radius: 0.3em;
+        border-bottom-right-radius: 0.3em;
+        height: 8em;
+        font-size: 1em;
 }
 
 .phead {
