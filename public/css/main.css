@@ -324,3 +324,16 @@ b {
     width: 100%;
     margin-left: 0.8em;
 }
+
+.sendButt {
+    background: #b25212;
+    width: 6ch;
+    text-align: center;
+    padding: 0.5em;
+    color: #edc1ac;
+    margin-top: 1em;
+    border-radius: 0.2em;
+    font-family: sans-serif;
+    border: 1px solid #762020;
+    cursor: pointer;
+}
