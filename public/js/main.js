@@ -28,6 +28,9 @@
 //
 
 function sendMail() {
+    document.getElementById("sendButt").innerHTML = "Sending...";
+    document.getElementById("sendButt").style.backgroundColor = "yellow";
+    document.getElementById("sendButt").style.color = "black";
     var xhr = new XMLHttpRequest();
 
     xhr.open('POST', '/sendMail');
@@ -37,6 +40,8 @@ function sendMail() {
             var res = JSON.parse(xhr.responseText);
             if (res.success == "true") {
                 document.getElementById("sendButt").innerHTML = "SENT!";
+                document.getElementById("sendButt").style.backgroundColor = "green";
+                document.getElementById("sendButt").style.color = "white";
             } else {
                 document.getElementById("sendButt").innerHTML = "Error";
             }

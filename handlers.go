@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"net/http"
 
 	"github.com/hartsfield/gmailer"
@@ -15,13 +16,13 @@ type newMail struct {
 
 // ajaxResponse is used to respond to ajax requests with arbitrary data in the
 // format of map[string]string
-// func ajaxResponse(w http.ResponseWriter, res map[string]string) {
-// 	w.Header().Set("Content-Type", "application/json")
-// 	err := json.NewEncoder(w).Encode(res)
-// 	if err != nil {
-// 		log.Println(err)
-// 	}
-// }
+func ajaxResponse(w http.ResponseWriter, res map[string]string) {
+	w.Header().Set("Content-Type", "application/json")
+	err := json.NewEncoder(w).Encode(res)
+	if err != nil {
+		log.Println(err)
+	}
+}
 
 func marshalMailData(r *http.Request) (*newMail, error) {
 	t := &newMail{}
@@ -42,6 +43,7 @@ func home(w http.ResponseWriter, r *http.Request) {
 }
 
 func sendMail(w http.ResponseWriter, r *http.Request) {
+	fmt.Println("sendmail")
 	m, _ := marshalMailData(r)
 	msg := gmailer.Message{
 		Recipient: "johnathanhartsfield@gmail.com",
@@ -49,6 +51,9 @@ func sendMail(w http.ResponseWriter, r *http.Request) {
 		Body:      m.From + "::" + m.Body,
 	}
 	msg.Send(onMessageSent)
+	ajaxResponse(w, map[string]string{
+		"success": "true",
+	})
 }
 
 func onMessageSent() {

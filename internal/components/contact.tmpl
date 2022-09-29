@@ -1,10 +1,10 @@
 {{ define "contact" }}
   <div class="contact">
-    <div class="contactHead">CONTACT</div>
+          <div class="contactHead">CONTACT </div><div class="contactLogo">{{ template "inlineLogo" }}</div>
     <form>
-      <input class="emailInput" placeholder="e-mail" name="email" type="email" />
-      <textarea class="messageArea" placeholder="Project Description and Budget"></textarea>
-      <div class="sendButt" onClick="sendMail()">Send</div>
+      <input class="emailInput" id="emailInput" placeholder="e-mail" name="email" type="email" />
+      <textarea class="messageArea" id="messageArea" placeholder="Project Description and Budget"></textarea>
+      <div class="sendButt" id="sendButt" onClick="sendMail()">Send</div>
     </form>
   </div>
 {{end}}
