@@ -345,3 +345,14 @@ b {
     font-weight: bold;
     font-style: italic;
 }
+
+.skills-ul {
+  padding-bottom: 2em;
+}
+
+.skills-ul > li {
+    font-size: 0.8em;
+    font-family: sans-serif;
+    color: #858475;
+    padding-bottom: 0.5em;
+}
